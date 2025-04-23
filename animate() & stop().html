@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 150px;
+            width: 150px;
+            background-color: aquamarine;
+            border: 2px solid black;
+            font-size: 20px;
+            font-weight: 600;
+            position: relative;
+            box-shadow: -3px 3px 5px black;
+        }
+        .stop
+        {
+            border-radius: 10px;
+            background-color: blanchedalmond;
+            box-shadow: 3px 3px 1px gray;
+            margin: 10px;
+            font-weight:600;
+        }
+    </style>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".box").click(function(){
+                //animate({css property},time duration) use property in camelcase ex font-size = fontSize.
+                //color and background-color not work in this function
+                $(this).animate({top:"400px",borderRadius:"50%"},500);
+                $(this).animate({top:"300px",left:"100px"},500);
+                $(this).animate({top:"400px"},500);
+                $(this).animate({top:"300px",left:"100px"},500);
+                $(this).animate({left:"1600px"},500);
+            });
+                $(".stop").click(function(){
+                    //this stop() only stop current animation rest of all will be completed 
+                    //its is also use fade in fade up slide up and down.
+                    $(".box").stop()
+                    // $(".box").stop(true)//this will stop animation
+                    // $(".box").stop(true,true) //this stop animation but in its completion point
+                 });
+                });
+    </script>
+</head>
+
+<body>
+    <button class="stop">Stop Animation</button>
+    <div class="box"></div>
+</body>
+
+</html>
