@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dd {
+            height: 300px;
+            width: 300px;
+            background-color: bisque;
+            border: 2px dashed red;
+        }
+
+        .ya {
+            color: brown;
+            background-color: darkcyan;
+        }
+
+        button {
+            border-radius: 5px;
+            border: 3px solid yellow;
+            background: red;
+            color: black;
+            box-shadow: 2px 4px 2px black;
+            cursor: pointer;
+        }
+
+        .red {
+            background-color: red;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 10px;
+        }
+    </style>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        $(function () {
+            //this method add class that we were already made in <style> this method help to add on selected tag,class,id.
+            $(".b1").click(function () {
+                $("p:first").addClass("red");
+            });
+            //this method remove class from tag that already in tag.
+            $(".b2").click(function () {
+                $("div").removeClass("dd");
+            });
+            //this method toggle class work as addclass() and removeclass() if tag have no class they add or already has so it will remove it.
+            $(".b3").click(function () {
+                $("h2").toggleClass("ya");
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="dd">
+        <h2 class="ya">addClass() removeClass() and toggleClass() in jquery</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <span>this is a sample text in span tag</span>
+        <h3>the end</h3>
+    </div><br>
+    <button class="b1">addClass()</button>
+    <button class="b2">removeClass()</button>
+    <button class="b3">toggleClass()</button>
+</body>
+
+</html>
