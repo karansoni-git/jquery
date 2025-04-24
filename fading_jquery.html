@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            display: none;
+            flex-direction: row;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .jadu {
+            display: flex;
+        }
+
+        .d1 {
+            height: 200px;
+            width: 200px;
+            overflow: auto;
+            border: 2px groove black;
+            margin: 20px;
+            background-color: bisque;
+        }
+
+        .d2 {
+            height: 200px;
+            width: 200px;
+            overflow: auto;
+            border: 2px groove black;
+            margin: 20px;
+            background-color: aquamarine;
+
+        }
+
+        .d3 {
+            height: 200px;
+            width: 200px;
+            overflow: auto;
+            border: 2px groove black;
+            margin: 20px;
+            background-color: brown;
+
+        }
+
+        #c1,#c2,#c3,#c4{
+            margin-left: 100px;
+            height: 60px;
+            width: 200px;
+            background-color: yellowgreen;
+            color: blue;
+            border-radius: 20px;
+            box-shadow: 2px 3px 2px blue;
+            font-family: cursive;
+        }
+        p{
+            border: 2px solid black;
+            height: 200px;
+            width: 250px;
+            background-color: tan;
+            display: none;
+            margin-left: 1000px;
+        }
+    </style>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        $(function () {
+            //this method is use for getting element like an animation three possible values are there fadeIn("slow","fast",miliseconds).
+            $("#c1").click(function () {
+                $(".main").fadeIn("slow");
+            });
+            //this method is use for removing element like an animation three possible values are there in fadeOut("slow","fast",miliseconds).
+            $("#c2").click(function () {
+                $(".main").fadeOut("fast");
+            });
+
+            $("#c3").click(function () {
+                $(".main").fadeToggle("2000");
+            });
+            //in this method we have two arguments that we have to give fadeTo("speed","opacity");
+            $("#c4").click(function () {
+                $("p").fadeTo("fast","0.7"); 
+            });
+
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <button id="c1">fadeIn()</button>
+    <button id="c2">fadeOut()</button>
+    <button id="c3">fadeToggle()</button>
+    <button id="c4">fadeTo()</button>
+    <div class="main">
+        <div class="jadu">
+            <div class="d1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim repellendus velit, esse voluptates
+                consequuntur
+                iure illum odio id nam tenetur fugit quis sequi earum, recusandae obcaecati laborum, dolor illo pariatur
+                ratione
+                accusamus et? Hic!
+            </div>
+            <div class="d2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, magni, iusto libero saepe
+                non
+                dolorum magnam voluptatibus ad facere consequuntur sapiente, blanditiis a nesciunt! Dignissimos iure
+                autem,
+                dolorum veniam quaerat quos assumenda.</div>
+            <div class="d3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quo, quas ex esse
+                perferendis
+                vitae maxime, cumque illo atque quod debitis!</div>
+        </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ipsam consequatur aperiam error culpa amet,
+        quisquam deleniti quae inventore magnam reiciendis facilis odit voluptatibus a maiores praesentium nulla. Esse
+        quaerat error delectus facere dolore commodi tenetur, blanditiis consectetur minima obcaecati dicta nam, non
+        cupiditate cum!</p>
+</body>
+
+</html>
