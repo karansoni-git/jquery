@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.3.1.js">
+    </script>
+    <script>
+        $(function () {
+            $(".b1").click(function () {
+                var a = $("#d").html(); //this event shows all tag and text in selected class,tag,id.
+                console.log(a);
+            });
+
+            $(".b2").click(function () {
+                var b = $("#d").text(); //this event shows all text in selected class,tag,id.
+                console.log(b);
+            });
+
+            $(".b3").click(function () {
+                var c = $("div").attr('style'); //this method shows the property and value that was used inside the particular attributes and its tag.
+                console.log(c);
+            });
+
+            $(".b4").click(function () {
+                var c = $("input").val(); //this method return value which was we entered in input box and mostly use in form.
+                alert("you have entered " + c);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="d" class="d1" style="color:black; background-color: yellow; border:2px solid black;">
+        <h2>jquery get methods</h2>
+        <p>hello this is a sample text in div tag</p>
+        <p>this is second sample line</p>
+        enter something<input type="text">
+    </div>
+    <button class="b1">html()</button>
+    <button class="b2">text()</button>
+    <button class="b3">attr()</button>
+    <button class="b4">val()</button>
+</body>
+
+</html>
