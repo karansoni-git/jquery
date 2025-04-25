@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border:2px solid black;
+            overflow: auto;
+            background: violet;
+        }
+    </style>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        $(function(){
+            $(".b1").click(function(){
+                $("div").height("220px");
+            });
+
+            $(".b2").click(function(){
+                $("div").width("200px");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="d">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sit libero ipsum unde suscipit soluta
+            aliquid distinctio! Maiores, assumenda repellendus.</p>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, repellendus.</span>
+    </div>
+    <button class="b1">height()</button>
+    <button class="b2">width()</button>
+</body>
+
+</html>
