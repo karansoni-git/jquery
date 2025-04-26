@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the class selector</title>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $(".name").hide();
+            });
+        }); 
+    </script>
+</head>
+
+<body>
+    <b class="name" style="cursor: pointer;">i will diappear after click button</b><br><br>
+    <b class="name" style="cursor: pointer;">i will diappear after click button</b><br><br>
+    <button>click me</button>
+</body>
+
+</html>
