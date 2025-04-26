@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the element selector</title>
+    <script src="jquery-3.3.1.js"></script>
+    <script>//$(function(){    }); use this instead of $(document).ready(function (){   });
+        $(document).ready(function () {
+            $("p").click(function () {
+                $("span").hide();
+            });
+        });</script>
+</head>
+<body>
+    <b>this is the element selector</b>
+    <p style="border:1px solid black; cursor: pointer;">hello click here to vanish below sentence</p>
+    <span>i will vanish if you click<p></span>
+</body>
+
+</html>
