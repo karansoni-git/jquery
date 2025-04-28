@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: aqua;
+        }
+        div{
+            background-color: antiquewhite;
+            border:10px groove black;
+            height: 300px;
+            width: 300px;
+            overflow: auto;
+            padding:50px ;
+            margin: 20px;
+        }
+    </style>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        $(function () {
+            $(".b1").click(function () {
+                console.clear();
+                console.log("width:" + $("div").width()); 
+                console.log("innerwidth:" +$("div").innerWidth());
+                console.log("outerwidth:" +$("div").outerWidth());
+                console.log("outerwidth(true):" +$("div").outerWidth(true));
+            });
+
+            $(".b2").click(function () {
+                console.clear();
+                console.log("height:" + $("div").height()); 
+                console.log("innerheight:" +$("div").innerHeight()); 
+                console.log("outerheight:" +$("div").outerHeight());
+                console.log("outerheight(true):" +$("div").outerHeight(true));
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="d1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, tempora consequuntur error inventore rem
+            at, quas, alias temporibus mollitia dolor placeat necessitatibus voluptatem?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum omnis perspiciatis vel.</p>
+        <span>Lorem ipsum dolor sit amet consectetur.</span>
+    </div>
+    <br>
+    <button class="b1">width()</button>
+    <button class="b2">height()</button>
+</body>
+
+</html>
