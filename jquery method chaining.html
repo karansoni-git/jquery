@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .d1{
+        background-color: bisque;
+        border:2px solid black;
+        font-family:cursive;
+        font-size: 20px;
+        height:230px;
+        width: 200px;
+    }
+    .btn
+    {
+        border:2px groove red;
+        background-color:darkcyan;
+        color:white;
+        border-radius: 20px;
+        box-shadow: 2px 3px 1px darkgray;
+    }
+    </style>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".btn").click(function(){
+                $(".d1").slideUp("slow").slideDown("slow").html("<li>hello this is new paragraph in div</li>");
+            });
+    });
+    </script>   
+</head>
+
+<body>
+    <div class="d1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti perspiciatis sit numquam sint rem architecto
+        soluta veritatis blanditiis magni placeat!
+    </div>
+    <br>
+    <button class="btn">click me</button>
+</body>
+
+</html>
