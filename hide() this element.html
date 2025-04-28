@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p,b{
+            cursor: pointer;
+        }
+    </style>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("p,b").click(function () {
+                $(this).hide();// "this" word remove the tag which we click on it 
+            });
+        });
+    </script>
+</head>
+
+<body>
+<p>i am fisrt paragraph</p>
+<b>i am first bold </b>
+<p>i am second paragraph</p>
+<b>i am second bold</b>
+</body>
+
+</html>
