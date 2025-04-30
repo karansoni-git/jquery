@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("body").keydown(function (event) {
+                $("body").css("background", "yellow");//this event work on special keys like shift,capslock,tab,ctrl.
+            });
+
+            $("body").keyup(function (event) {
+                $("body").css("background", "red");//when you realse any key event will occurs.
+            });
+
+            $("body").keypress(function (event) {
+                $("body").css("background", "green");//this function is similar to keydown event.
+            });
+
+        });
+    </script>
+    <style>
+        div {
+            background-color: white;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <p>When you type in the field above, the div element below will display the key number.</p>
+
+    </div>
+</body>
+
+</html>
