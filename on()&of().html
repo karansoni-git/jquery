@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background: blueviolet;
+            border: 2px solid saddlebrown;
+            height: 300px;
+            width: 300px;
+            overflow: auto;
+        }
+
+        p {
+            background: sandybrown;
+            border: 2px dashed red;
+            border-radius: 20px;
+            overflow: hidden;
+            padding-left: 11px;
+        }
+
+        span {
+            background: indianred;
+            border: 2px groove fuchsia;
+            border-radius: 20px;
+            display: block;
+            padding-left: 12px;
+        }
+
+        .b {
+            border: 2px solid black;
+            box-shadow: 2px 4px 2px black;
+            border-radius: 20px;
+            background: slateblue;
+        }
+    </style>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        $(function () {
+            //on() method is use for giving multiple event together.
+            $("div").on({
+                "click": function () {
+                    $("div").css("background", "red");
+                },
+                "mouseout": function () {
+                    $("div").css("background", "saddlebrown");
+                }
+            });
+            //off() method is use for off the event.
+            $(".b").click(function () {
+                $("div").off("click");
+            });
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <div class="d1">
+        <h2>on() & of() jquery</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo optio aliquid totam praesentium qui quae
+            suscipit, molestias magnam debitis inventore odit dolores tempore.</p>
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus ea vel provident?</span>
+        <h3>click me to change my color</h3>
+    </div>
+    <br>
+    <button class="b">off()</button>
+    <br><br>
+   <strong>NOTE:</strong>off() button will stop changing color when you click.
+</body>
+
+</html>
