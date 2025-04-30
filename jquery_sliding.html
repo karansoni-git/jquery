@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            border: 2px solid black;
+            display: inline;
+            background: gray;
+            font-size: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            cursor: pointer;
+        }
+
+        ul {
+            background: salmon;
+            display: none;
+            text-decoration: underline;
+        }
+
+        li {
+            background: sandybrown;
+            list-style-position: outside;
+        }
+    </style>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        $(function () {
+            $("p").mouseenter(function(){
+                $("ul").slideDown("slow");
+            });
+
+            $("ul").mouseleave(function(){
+                $("ul").slideUp("slow");
+            });
+
+            $("p").click(function(){
+                $("ul").slideToggle("slow");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p>menu</p>
+    <ul type="square">
+        <li>home</li>
+        <li>contact</li>
+        <li>about us</li>
+    </ul>
+</body>
+
+</html>
