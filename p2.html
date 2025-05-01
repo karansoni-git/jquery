@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>photo</title>
+    <style>
+        img{
+            height: 500px;
+            width: 800px;
+            border: 4px solid black;
+        }
+        p{
+            height: 100px;
+            width: 600px;
+            border: 2px solid red;
+            display:none;
+        }
+    </style>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        $(function(){
+            $("img").mouseenter(function(){
+                $("p").fadeIn("slow");
+            });
+
+            $("body").mouseout(function(){
+                $("p").fadeOut("slow");
+            });
+        });
+
+    </script>
+</head>
+
+<body align="center">
+    <div class="d">
+        <img src="C:\Users\karan\Downloads\pexels-eberhard-grossgasteiger-640781.jpg" alt="picture">
+        <center> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum id provident, reprehenderit ut fugiat incidunt
+            amet nihil, accusamus est voluptatem repellat voluptatum repudiandae quos nesciunt necessitatibus dolores optio.
+                Consectetur voluptate ad non autem.</p></center>
+    </div>
+   
+   
+</body>
+
+</html>
