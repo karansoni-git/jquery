@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        $(function () {
+            $("#d").css("border", "1px dotted blue");
+            $("#d").css("background", "blue");
+            $(".u").css("border", "1px solid black");
+            $(".u").css("background", "dodgerblue");
+           // $("ul li:eq(1)").css("background", "red");//eq for selecting particular line.
+            $("ul li").css("background", "yellow");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="d">
+        <ul class="u" type="square">
+            <li class="l1">first</li>
+            <li class="l2">second</li>
+            <li class="l3">third</li>
+            <li class="l4">fourth</li>
+        </ul>
+    </div>
+</body>
+
+</html>
