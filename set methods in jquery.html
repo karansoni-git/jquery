@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            border: 2px groove black;
+            background: aqua;
+        }
+
+        .red {
+            color: red;
+            background: gold;
+        }
+    </style>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        $(function () {
+            //in html() method we can use input text with tags.
+            $(".b1").click(function () {
+                $("#d span").html("<h4><i>hello this is a h4 tag</i></h4>");
+            });
+            //inn text() method we can input text only if we try to input tag they print tag.
+            $(".b2").click(function () {
+                $("#d p:first").text("<i>hello this is a h4 tag</i>");
+            });
+            //attr() help to give attributes to particular tag,id,class.
+            $(".b3").click(function () {
+                $("#d p:last").attr("style", "color:red; background:yellow;");
+            });
+            //val() help to give value in text box.
+            $(".b4").click(function () {
+                $("input").val("this sample text");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h2>set methods in jquery</h2>
+    <div id="d">
+        <span>this is a span tag and it is sample text</span>
+        <p>
+            this is a tag and it is inside div tag1</p>
+        <p>this is sample text </p>
+    </div><br>
+    TEXT:<input type="text">
+    <br>
+    <br>
+    <button class="b1">sethtml()</button>
+    <button class="b2">settext()</button>
+    <button class="b3">setattr()</button>
+    <button class="b4">setval()</button>
+</body>
+
+</html>
