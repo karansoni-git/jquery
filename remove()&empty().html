@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        $(function () {
+            $(".b1").click(function () {
+                $("p").remove();   //remove() method completely remove tag with text.
+            });
+
+            $(".b2").click(function () {
+                $("p").empty();    //when empty() method removes only text that is inside the tag.
+            });
+        });
+    </script>
+    <style>
+        div {
+            background-color: skyblue;
+            color: yellow;
+            border: 2px solid black;
+            height: 200px;
+            width: 300px;
+            overflow: auto;
+        }
+
+        p.p1 {
+            background-color: limegreen;
+            border: 2px solid black;
+        }
+
+        p {
+            background: red;
+            border: 2px groove black
+        }
+
+        span {
+            background: fuchsia;
+            border: 2px dotted red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dd">
+        <h2>remove() & empty() methods</h2>
+        <p class="p1">Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit labore sunt molestias.</span>
+    </div><br>
+    <button class="b1">remove()</button>
+    <button class="b2">empty()</button>
+</body>
+
+</html>
