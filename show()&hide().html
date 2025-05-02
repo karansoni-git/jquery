@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#h").click(function(){
+                $(".re").hide();
+                $("body").css("background","red");
+            });
+
+            $("#s").click(function(){
+                $(".re").show();
+                $("body").css("background","green");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="dd">
+        <p class="re">hello this in div tag and it will hide when you click hide button and show again when you click show button</p>
+    </div>
+    <button id="h">hide</button>
+    <button id="s">show</button>
+</body>
+</html>
