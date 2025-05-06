@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("form").submit(function () {     //submit occurs when submit button click
+                alert("successfully subitted");
+            });
+
+            $("form").change(function () {     //change function occurs when user remove focus from text box.
+                alert("are u sure to move ");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <form>
+        Enter Name:<input type="text">
+        <br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+
+</html>
